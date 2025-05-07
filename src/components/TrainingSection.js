@@ -1,0 +1,88 @@
+// src/components/TrainingSection.js
+import React from 'react';
+import { Box, Container, Typography, Card, CardContent, CardMedia, Grid } from '@mui/material';
+import { motion } from 'framer-motion';
+import formation1 from '../assets/images/formation1.png';
+import formation2 from '../assets/images/formation1.png';
+import formation3 from '../assets/images/formation1.png';
+import formation4 from '../assets/images/formation1.png';
+import formation5 from '../assets/images/formation1.png';
+import formation6 from '../assets/images/formation1.png';
+
+const trainings = [
+  { title: 'HTML & CSS', description: 'Apprenez les bases du web moderne.', image: formation1 },
+  { title: 'JavaScript Avancé', description: 'Dominez les fonctions, closures et classes.', image: formation2 },
+  { title: 'React.js Pro', description: 'Créez des interfaces dynamiques avec React.', image: formation3 },
+  { title: 'Node.js & APIs', description: 'Construisez des serveurs robustes.', image: formation4 },
+  { title: 'UI/UX Design', description: 'Concevez des expériences utilisateurs optimales.', image: formation5 },
+  { title: 'Cybersécurité', description: 'Sécurisez vos applications web.', image: formation6 },
+];
+
+const TrainingSection = () => {
+  return (
+    <Box
+    id="formations"
+    sx={{
+      py: { xs: 6, md: 10 },
+      background: 'linear-gradient(135deg, #0d0d0d, #111317)',
+    }}
+  >
+    <Container>
+      <Typography
+        variant="h3"
+        align="center"
+        sx={{
+          fontFamily: 'Orbitron, sans-serif',
+          color: '#00ffff',
+          fontWeight: 700,
+          mb: 6,
+        }}
+      >
+        Nos Formations
+      </Typography>
+  
+      <Grid container spacing={4} justifyContent="center">
+        {trainings.map((training, index) => (
+          <Grid item xs={12} sm={6} md={4} key={index}>
+            <motion.div whileHover={{ scale: 1.05 }}>
+              <Card
+                sx={{
+                  height: '100%',
+                  backgroundColor: '#111',
+                  color: '#fff',
+                  borderRadius: 3,
+                  overflow: 'hidden',
+                  boxShadow: '0 0 20px rgba(0,255,255,0.1)',
+                  transition: '0.3s',
+                  '&:hover': {
+                    boxShadow: '0 0 30px rgba(0,255,255,0.3)',
+                  },
+                }}
+              >
+                <CardMedia
+                  component="img"
+                  height="180"
+                  image={training.image}
+                  alt={training.title}
+                  sx={{ objectFit: 'cover' }}
+                />
+                <CardContent>
+                  <Typography variant="h6" sx={{ color: '#00ffff', fontWeight: 600 }}>
+                    {training.title}
+                  </Typography>
+                  <Typography variant="body2" sx={{ mt: 1, color: '#ccc' }}>
+                    {training.description}
+                  </Typography>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </Grid>
+        ))}
+      </Grid>
+    </Container>
+  </Box>
+  
+  );
+};
+
+export default TrainingSection;

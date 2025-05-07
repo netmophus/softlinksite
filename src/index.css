@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* bloque tout débordement horizontal de la timeline */
+#services {
+  overflow-x: hidden;
+}
+
+html, body {
+  overflow-x: hidden;          /* jamais de scroll horizontal */
+}
