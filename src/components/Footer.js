@@ -1,75 +1,3 @@
-// import React from 'react';
-// import { Box, Container, Grid, Typography, Link, Divider } from '@mui/material';
-// import { Facebook, LinkedIn, Twitter, Email } from '@mui/icons-material';
-
-// const Footer = () => {
-//   return (
-//     <Box sx={{ bgcolor: '#0d0d0d', color: '#ccc', pt: 8, pb: 4 }}>
-//       <Container maxWidth="lg">
-//         <Grid container spacing={4}>
-//           {/* Branding */}
-//           <Grid item xs={12} md={4}>
-//             <Typography variant="h6" sx={{ color: '#00ffff', mb: 2 }}>
-//               Softlink
-//             </Typography>
-//             <Typography variant="body2">
-//               Startup spécialisée dans le développement d'applications sur mesure et la transformation digitale. 
-//               Innovation, performance et design au service de votre vision.
-//             </Typography>
-//           </Grid>
-
-//           {/* Liens rapides */}
-//           <Grid item xs={12} md={4}>
-//             <Typography variant="h6" sx={{ color: '#00ffff', mb: 2 }}>
-//               Liens rapides
-//             </Typography>
-//             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
-//               <Link href="#" underline="hover" color="#ccc">Accueil</Link>
-//               <Link href="#" underline="hover" color="#ccc">Services</Link>
-//               <Link href="#" underline="hover" color="#ccc">Projets</Link>
-//               <Link href="#" underline="hover" color="#ccc">Contact</Link>
-//             </Box>
-//           </Grid>
-
-//           {/* Contact & Réseaux */}
-//           <Grid item xs={12} md={4}>
-//             <Typography variant="h6" sx={{ color: '#00ffff', mb: 2 }}>
-//               Nous contacter
-//             </Typography>
-//             <Typography variant="body2" sx={{ mb: 1 }}>
-//               Email : contact@softlink.com
-//             </Typography>
-//             <Typography variant="body2" sx={{ mb: 2 }}>
-//               Téléphone : +227 90 00 00 00
-//             </Typography>
-//             <Box sx={{ display: 'flex', gap: 2 }}>
-//               <Link href="#" target="_blank" rel="noopener" color="#00ffff">
-//                 <Facebook />
-//               </Link>
-//               <Link href="#" target="_blank" rel="noopener" color="#00ffff">
-//                 <LinkedIn />
-//               </Link>
-//               <Link href="#" target="_blank" rel="noopener" color="#00ffff">
-//                 <Twitter />
-//               </Link>
-//               <Link href="mailto:contact@softlink.com" color="#00ffff">
-//                 <Email />
-//               </Link>
-//             </Box>
-//           </Grid>
-//         </Grid>
-
-//         <Divider sx={{ borderColor: '#00ffff20', my: 4 }} />
-
-//         <Typography variant="body2" align="center" sx={{ color: '#666' }}>
-//           © {new Date().getFullYear()} Softlink. Tous droits réservés.
-//         </Typography>
-//       </Container>
-//     </Box>
-//   );
-// };
-
-// export default Footer;
 
 
 
@@ -85,15 +13,16 @@ import {
   Divider,
   IconButton,
 } from '@mui/material';
-import { Facebook, LinkedIn, Twitter, Email } from '@mui/icons-material';
+import { Facebook, LinkedIn, YouTube, Email } from '@mui/icons-material';
 import logo from '../assets/images/logo.png';
 
 const quickLinks = ['Accueil', 'Services', 'Projets', 'Équipe', 'Contact'];
 const social = [
-  { icon: <Facebook />, url: '#' },
+  { icon: <Facebook />, url: 'https://www.facebook.com/softlink.2204/' },
   { icon: <LinkedIn />, url: '#' },
-  { icon: <Twitter />, url: '#' },
-  { icon: <Email />, url: 'mailto:contact@softlink.com' },
+  { icon: <YouTube />, url: 'https://www.youtube.com/@softlink' },
+
+  { icon: <Email />, url: 'mailto:contact@softlink-groupe.com' },
 ];
 
 const Footer = () => (
@@ -218,12 +147,12 @@ const Footer = () => (
           </Typography>
           <Typography variant="body2" sx={{ mb: 1 }}>
             Mail:{' '}
-            <Link href="mailto:contact@softlink.com" color="#ccc">
-              contact@softlink.com
+            <Link href="mailto:contact@softlink-groupe.com" color="#ccc">
+              contact@softlink-groupe.com
             </Link>
           </Typography>
           <Typography variant="body2" sx={{ mb: 2 }}>
-            Tel: +227 90 00 00 00
+            Tel: +227 80 64 83 83
           </Typography>
           <Box sx={{ display: 'flex', gap: 1 }}>
             {social.map((s, i) => (

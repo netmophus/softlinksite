@@ -2,12 +2,12 @@
 import React from 'react';
 import { Box, Container, Typography, Card, CardContent, CardMedia, Grid } from '@mui/material';
 import { motion } from 'framer-motion';
-import formation1 from '../assets/images/formation1.png';
-import formation2 from '../assets/images/formation1.png';
-import formation3 from '../assets/images/formation1.png';
-import formation4 from '../assets/images/formation1.png';
-import formation5 from '../assets/images/formation1.png';
-import formation6 from '../assets/images/formation1.png';
+import formation1 from '../assets/images/html.png';
+import formation2 from '../assets/images/javascript.png';
+import formation3 from '../assets/images/reactjs.png';
+import formation4 from '../assets/images/bootstrap5.png';
+import formation5 from '../assets/images/arduino1.png';
+import formation6 from '../assets/images/network1.png';
 
 const trainings = [
   { title: 'HTML & CSS', description: 'Apprenez les bases du web moderne.', image: formation1 },

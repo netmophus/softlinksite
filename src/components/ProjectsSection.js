@@ -124,23 +124,25 @@ const ProjectsSection = () => (
                 {p.description}
               </Typography>
               <Box
-                component="a"
-                href="#contact"
-                sx={{
-                  display: 'inline-block',
-                  mt: 2,
-                  px: 3,
-                  py: 1,
-                  border: '1px solid #00ffff',
-                  color: '#00ffff',
-                  borderRadius: 1,
-                  textDecoration: 'none',
-                  transition: 'background 0.3s',
-                  '&:hover': { background: 'rgba(0,255,255,0.2)' },
-                }}
-              >
-                En savoir plus
-              </Box>
+  component="span"
+  onClick={() => {}}
+  sx={{
+    display: 'inline-block',
+    mt: 2,
+    px: 3,
+    py: 1,
+    border: '1px solid #00ffff',
+    color: '#00ffff',
+    borderRadius: 1,
+    textDecoration: 'none',
+    transition: 'background 0.3s',
+    cursor: 'default',
+    '&:hover': { background: 'rgba(0,255,255,0.2)' },
+  }}
+>
+  En savoir plus
+</Box>
+
             </Box>
           </Box>
         </motion.div>
