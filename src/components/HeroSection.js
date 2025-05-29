@@ -74,17 +74,19 @@ const HeroSection = () => {
           transition={{ duration: 1 }}
         >
           <Typography
-            variant="h1"
-            sx={{
-              fontFamily: 'Orbitron, sans-serif',
-              color: '#00ffff',
-              fontSize: { xs: '3rem', md: '5rem' },
-              lineHeight: 1.1,
-              mb: 2,
-            }}
-          >
-            Future&nbsp;is&nbsp;Digital
-          </Typography>
+          variant="h1"
+          sx={{
+            fontFamily: 'Orbitron, sans-serif',
+            color: '#00ffff',
+            fontSize: { xs: '3rem', md: '5rem' },
+            lineHeight: 1.1,
+            mb: 2,
+            mt: { xs: 10, sm: 0 }, // ✅ Ajout ici
+          }}
+        >
+          Future&nbsp;is&nbsp;Digital
+        </Typography>
+
           <Typography variant="h6" sx={{ color: '#ccc', mb: 4 }}>
             Votre vision, notre expertise<br />en développement et digitalisation.
           </Typography>
