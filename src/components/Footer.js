@@ -3,7 +3,7 @@
 
 // src/components/Footer.js
 
-import React from 'react';
+import React, { useState} from 'react';
 import {
   Box,
   Container,
@@ -23,9 +23,14 @@ const social = [
   { icon: <YouTube />, url: 'https://www.youtube.com/@softlink' },
 
   { icon: <Email />, url: 'mailto:contact@softlink-groupe.com' },
+
 ];
 
-const Footer = () => (
+
+
+const Footer = ({ onOpenList }) => (
+
+  
   <Box
     component="footer"
     sx={{
@@ -128,7 +133,39 @@ const Footer = () => (
               >
                 {label}
               </Link>
+
+
+
             ))}
+
+
+
+            <Link
+  underline="none"
+  onClick={onOpenList}
+  sx={{
+    position: 'relative',
+    color: '#ccc',
+    py: 0.5,
+    cursor: 'pointer',
+    transition: 'color 0.3s',
+    '&:hover': { color: '#00ffff' },
+    '&:after': {
+      content: '""',
+      position: 'absolute',
+      bottom: 0,
+      left: 0,
+      height: '2px',
+      width: 0,
+      backgroundColor: '#00ffff',
+      transition: 'width 0.3s',
+    },
+    '&:hover:after': { width: '100%' },
+  }}
+>
+  Inscriptions
+</Link>
+
           </Box>
         </Grid>
 
