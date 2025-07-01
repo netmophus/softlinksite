@@ -46,6 +46,26 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import InscriptionPage from './pages/InscriptionPage'; // ✅ import de ta page d'inscription
 import ModalListeInscriptions from './components/ModalListeInscriptions';
+
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+function RouteTracker() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.gtag) {
+      window.gtag('config', 'G-YNG4CMY4GN', {
+        page_path: location.pathname,
+      });
+    }
+  }, [location]);
+
+  return null;
+}
+
+
+
 function HomePage() {
   const [openListModal, setOpenListModal] = useState(false);
 
@@ -68,6 +88,7 @@ function HomePage() {
 function App() {
   return (
     <Router>
+      <RouteTracker />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/inscription" element={<InscriptionPage />} />
@@ -75,5 +96,6 @@ function App() {
     </Router>
   );
 }
+
 
 export default App;
