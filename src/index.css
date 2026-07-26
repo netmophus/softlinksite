@@ -1,0 +1,52 @@
+/* Reset minimal + base globale. Le reste du style vient du thème MUI. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  /* 'clip' empêche le scroll horizontal SANS casser le position:sticky du header */
+  overflow-x: clip;
+  background-color: #0a0a12;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Bordure dégradée qui tourne (badge « accroche ») */
+@property --badge-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes badge-rotate {
+  to {
+    --badge-angle: 360deg;
+  }
+}
+@keyframes badge-dot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.5); opacity: 0.45; }
+}
+
+/* Scrollbar discrète, cohérente avec le thème sombre */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a12;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2a38;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2a3b4d;
+}
