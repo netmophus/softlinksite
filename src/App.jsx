@@ -1,6 +1,7 @@
 import TopBar from './components/TopBar'
 import Header from './components/Header'
 import Hero from './sections/Hero'
+import Equipe from './sections/Equipe'
 import Services from './sections/Services'
 import Solutions from './sections/Solutions'
 import Formations from './sections/Formations'
@@ -12,6 +13,7 @@ export default function App() {
       <TopBar />
       <Header />
       <Hero />
+      <Equipe />
       <Services />
       <Solutions />
       <Formations />

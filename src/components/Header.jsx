@@ -15,6 +15,7 @@ import logo from '../assets/images/logo.png'
 
 const NAV = [
   { label: 'Accueil', id: 'accueil' },
+  { label: 'Équipe', id: 'equipe' },
   { label: 'Services', id: 'services' },
   { label: 'Nos solutions', id: 'solutions' },
   { label: 'Formations', id: 'formations' },
